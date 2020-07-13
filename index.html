@@ -1,0 +1,79 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" href="index_css.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+<script>
+function init() {
+            
+	var li1 = document.getElementById("li1").offsetWidth;
+	var li2 = document.getElementById("li2").offsetWidth;
+	var li3 = document.getElementById("li3").offsetWidth;
+
+	document.documentElement.style.setProperty('--width1', li1);
+	document.documentElement.style.setProperty('--width2', li2);
+	document.documentElement.style.setProperty('--width3', li3);
+
+
+        }
+
+
+        window.onload = init;
+</script>
+
+</head>	
+
+
+
+
+<body>
+
+<div id="bg">	
+<div id="tablecont">
+<table cellspacing="0" cellpadding="0">
+	<tbody>
+		<tr>
+			<td>
+			</td>
+		</tr>
+		<tr id="tr_left_bot">
+			<td style="text-align: left; width:100%;">
+				<p style="font-size: 10vw; height: 10vw; color:var(--red)">George Tsouchlis</p>
+				<p style="font-size: 6vw; height: 6vw; color:var(--red)">Junior Front-End</p>
+			</td>
+			<td rowspan="3">
+				<div id="listcont">
+					<ul>
+						<li ><a href="about.html" id="li1">ABOUT</a></li>
+						<li ><a href="work.html" id="li2">WORKS</a></li>
+						<li ><a href="contact.html" id="li3">CONTACT</a></li>
+					</ul>
+				</div>	
+			</td>
+		</tr>
+		<tr>
+			<td>	
+			</td>
+			
+		</tr>
+	</tbody>
+</table>	
+</div>
+
+</div>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>

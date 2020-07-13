@@ -1,0 +1,165 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" href="work_css.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+</head>	
+
+<body>
+
+<div style="display: flex; justify-content: center; align-items: center;">
+	
+		<a href="index.html">HOME</a><span></span>
+		<a href="about.html">ABOUT</a><span></span>
+		<a href="contact.html">CONTACT</a>
+	
+</div>	
+
+<section>
+	<div id="container">
+	<h2>Web Dev</h2>
+		<p>This site so far</p>
+		<p>You can help to expand this</p>
+	</div>
+</section>
+
+<section>
+	<div id="container">
+	<h2>Graphic Design</h2>
+	<table>
+
+		<tr>
+			<td>
+				<img class="myImg" id="mImg1" src="1.jpg" style="width:100%;max-width:300px">
+				<div id="modal1" class="modal">
+					<span class="close" id="close1">&times;</span>
+				    <img class="modal-content" id="img1">
+			  		<div id="caption"></div>
+				</div>
+			</td>
+			<td>
+				<img class="myImg"id="mImg2" src="2.jpg" style="width:100%;max-width:300px">
+				<div id="modal2" class="modal">
+					<span class="close" id="close2">&times;</span>
+				    <img class="modal-content" id="img2">
+			  		<div id="caption"></div>
+				</div>
+			</td>
+			<td>
+				<img class="myImg"id="mImg3" src="3.jpg" style="width:100%;max-width:300px">
+				<div id="modal3" class="modal">
+					<span class="close" id="close3">&times;</span>
+				    <img class="modal-content" id="img3">
+			  		<div id="caption"></div>
+				</div>
+			</td>
+			<td>
+				<img class="myImg"id="mImg4" src="4.jpg" style="width:100%;max-width:300px">
+				<div id="modal4" class="modal">
+					<span class="close" id="close4">&times;</span>
+				    <img class="modal-content" id="img4">
+			  		<div id="caption"></div>
+				</div>
+			</td>
+			<td>
+				<img class="myImg" id="mImg5" src="5.jpg" style="width:100%;max-width:300px">
+				<div id="modal5" class="modal">
+					<span class="close" id="close5">&times;</span>
+				    <img class="modal-content" id="img5">
+			  		<div id="caption"></div>
+				</div>
+			</td>
+		</tr>
+		
+			
+	</table>
+				
+		
+	</div>
+</section>
+
+<script>
+
+	
+	const modal_arr = [];
+	const mImg_arr = [];
+	const img_arr = [];
+	const length = document.getElementsByClassName('modal-content');
+	const span_arr = [];
+
+	for(let i=0; i<length.length;i++){
+		let temp=i+1;
+		let strmodal = "modal"+temp;
+		let strmImg = "mImg"+temp;
+		let strimg = "img"+temp;
+		let strspan = "close"+temp;
+
+
+		
+		modal_arr.push(document.getElementById(strmodal));
+		mImg_arr.push(document.getElementById(strmImg));
+		img_arr.push(document.getElementById(strimg));
+
+		mImg_arr[i].addEventListener('click', function(){
+
+			modal_arr[i].style.display="block";
+			img_arr[i].src = this.src;
+		});
+
+
+		span_arr.push(document.getElementById(strspan));
+
+		span_arr[i].addEventListener('click', function(){
+
+			modal_arr[i].style.display = "none";
+
+		});
+
+		
+
+		
+	}
+
+	window.onkeyup = function (event) {
+		  	if (event.keyCode == 27) {
+		  		modal_arr.forEach(function(elem){
+		  			elem.style.display="none";
+		  			console.log(elem);
+		  		});
+		    	
+		  	}
+ 		}
+
+
+	/*var span = document.getElementsByClassName("close")[0];
+
+		span.onclick = function() {
+	  	modal.style.display = "none";
+	}
+
+	
+	var modal = document.getElementById("myModal"); = modal#
+	
+	var img = document.getElementById("myImg"); = mImg
+	var modalImg = document.getElementById("img01"); = img#
+		
+		img.onclick = function(){
+		  modal.style.display = "block";
+		  modalImg.src = this.src;
+		}
+		*/
+
+
+
+
+	
+	
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<html>
+
+<head>
+
+<link rel="stylesheet" href="about_css.css">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"> 
+
+</head>	
+
+<body>
+
+<div style="display: flex; justify-content: center; align-items: center;">
+	
+		<a href="index.html">HOME</a><span>
+		<a href="work.html">WORKS</a><span>
+		<a href="contact.html">CONTACT</a>
+	
+</div>	
+
+
+<section>
+	<div id="container">
+	<h2>About</h2>
+		<p>Born 1995, Senior in Harokopio University of Athens, Greece</p>
+		<p>Junior Front-End developer</p>
+		<p>Graphic Design / Video Editing hobbyist</p>
+	</div>
+</section>
+
+<section style="height:70vh;">
+	<div id="container">
+		<h2>Skills</h2>
+
+			<table style="margin-top: 10vh;">
+				<tr><td id="bar bar1"><p>CSS</p></td><td><p class="count">80</p></td></tr>
+				<tr><td id="bar bar2"><p>JAVASCRIPT</p></td><td><p class="count">60</p></td></tr>
+				<tr><td id="bar bar3"><p>SQL</p></td><td><p class="count">65</p></td></tr>
+				<tr><td id="bar bar4"><p>PHOTOSHOP</p></td><td><p class="count">80</p></td></tr>
+			</table>
+
+			<p style="font-size: 1em"> Additional Skills: Sony Vegas Pro, Java, UX</p>
+	</div>
+
+</section>	
+
+<section>
+<div id="container">
+	<h2>Why Hire Me?</h2>
+
+	<div class="gallery js-flickity "
+  data-flickity-options='{ "wrapAround": true, "pageDots": false }'>
+  <div class="gallery-cell">Team Oriented</div>
+  <div class="gallery-cell">Adaptive / Quick Learner</div>
+  <div class="gallery-cell">Goal Driven</div>
+  <div class="gallery-cell">People's Person</div>
+  <div class="gallery-cell">I need the money</div>
+</div>
+
+		
+	</div>
+</section>	
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/1.0.0/flickity.pkgd.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="scroll.js"></script>
+<script type="text/javascript">
+	ScrollOut({
+		targets: 'h2, p, tr, td, table'
+	});
+
+
+
+$('.count').each(function () {
+    $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+    }, {
+        duration: 1500,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+});
+	
+</script>
+</body>
+
+</html>

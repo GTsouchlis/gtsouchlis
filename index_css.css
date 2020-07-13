@@ -1,0 +1,117 @@
+*{
+	font-family: 'Bebas Neue', cursive;
+}
+
+:root{
+	--red:#fa5316;
+	--black:#262626;
+	--grey:#676561;
+	--width1:0px;
+	--width2:0px;
+	--width3:0px;
+}
+
+body{
+	background-color: var(--black);
+}
+
+
+body::after {
+  	content: "";
+  	background: url("bg.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+ 	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+	opacity: 0.05;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+	z-index: -1;   
+}
+
+.tablecont{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	overflow-x:auto;
+}
+table {
+	position: absolute;
+	top:50%;
+	left:50%;
+	
+  	transform: translate(-50%,-50%);
+  	
+    table-layout: auto;
+    border-collapse: collapse;
+    width: 98%;
+
+}
+p{	
+	line-height: 100%;
+	margin:0;
+	padding: 0;
+	overflow: hidden;
+}
+tr{
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+}
+
+@media screen and (max-width: 600px) {
+  p {
+    font-size: 30px;
+  }
+}
+
+ul{
+	list-style: none;
+}
+li{
+	font-size: 5vw;
+	color:var(--red);
+	position:relative;
+	display: block;
+}
+
+a{
+	text-decoration: none !important;
+	color:var(--red);
+
+}
+a:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  background: var(--red);
+  transition: .2s ease-in-out;
+  width: 0;
+}
+
+
+
+li:first-of-type > a:hover:after { 
+	width: var(--width1); 
+	left: 0; 
+}
+
+li:nth-of-type(2) > a:hover:after{
+	width:var(--width2);
+	left:0;
+}
+
+li:nth-of-type(3) > a:hover:after{
+	width:var(--width3);
+	left:0;
+}
+
+a:visited, a:hover, a:focus, a:hover, a:active { text-decoration: none; color:var(--red }
+
